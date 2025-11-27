@@ -5,8 +5,22 @@ USERNAME=0
 EDIT=0
 REMOVE=0
 
+function show_help() {
+    echo "Usage: $0 [OPTIONS]"
+    echo
+    echo "If no options are provided, the password of the selected entry will be copied to clipboard."
+    echo
+    echo "Options:"
+    echo "  -s, --show        Show full entry details"
+    echo "  -u, --username    Copy username to clipboard"
+    echo "  -e, --edit        Edit the entry"
+    echo "  -r, --remove      Remove the entry"
+    echo "  -h, --help        Show this help message"
+}
+
 while [[ $# -gt 0 ]]; do
     case "$1" in
+        -h|--help) show_help; exit 0;;
         -s|--show) SHOW=1; shift;;
         -u|--username) USERNAME=1; shift;;
         -e|--edit) EDIT=1; shift;;

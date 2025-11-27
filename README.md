@@ -41,7 +41,7 @@ This is just a bash script, so:
   If no options are provided, the password of the selected entry will be copied to clipboard
 
   Options:
-    -s, --show        Show the full entry
+    -s, --show        Show the entry details
     -u, --username    Copy the username to clipboard
     -e, --edit        Edit the entry
     -r, --remove      Remove the entry
