@@ -1,6 +1,6 @@
 # fuzzpass
 
-Fuzzily interact with [lastpass-cli](https://github.com/lastpass/lastpass-cli)
+Fuzzy-find with [lastpass-cli](https://github.com/lastpass/lastpass-cli)
 
 ## Requirements
 
@@ -36,7 +36,7 @@ This is just a bash script, so:
 2. Run the name of the executable
 
   ```
-  Usage: ./fuzzpass.sh [OPTIONS]
+  Usage: fuzzpass [OPTIONS]
 
   If no options are provided, the password of the selected entry will be copied to clipboard
 
