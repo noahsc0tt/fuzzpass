@@ -11,7 +11,7 @@ function show_help() {
     echo "If no options are provided, the password of the selected entry will be copied to clipboard."
     echo
     echo "Options:"
-    echo "  -s, --show        Show full entry details"
+    echo "  -s, --show        Show the entry details"
     echo "  -u, --username    Copy username to clipboard"
     echo "  -e, --edit        Edit the entry"
     echo "  -r, --remove      Remove the entry"
@@ -28,6 +28,10 @@ while [[ $# -gt 0 ]]; do
         *) echo "unknown option: $1"; exit 1;;
     esac
 done
+
+if [[ $(lpass status) == *"Not logged in."* ]]; then
+    lpass sync
+fi
 
 name=$(lpass ls \
     | sed 's/^[^/]*\///' \
